@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextInputField" customModule="Compassion" customModuleProvider="target">
+            <connections>
+                <outlet property="completeStackView" destination="xKN-ZO-VbC" id="RLq-4z-NNH"/>
+                <outlet property="imageView" destination="UqN-9H-Fk8" id="Swq-QS-1eq"/>
+                <outlet property="innerStackView" destination="Jdt-io-wSQ" id="lLf-Hd-jQq"/>
+                <outlet property="inputTitleLabel" destination="WPf-Bf-nW8" id="FNj-2A-9Gt"/>
+                <outlet property="outerInputView" destination="5T5-WS-vN6" id="aTK-gw-hCX"/>
+                <outlet property="textInputField" destination="I0R-5u-3mz" id="pNu-kQ-pCD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nXc-mh-LX3">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xKN-ZO-VbC">
+                    <rect key="frame" x="0.0" y="0.0" width="473" height="67"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNi-xt-6HY">
+                            <rect key="frame" x="0.0" y="0.0" width="473" height="21"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQc-s8-MgJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="12" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="12" id="FeF-3o-NIo"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPf-Bf-nW8">
+                                    <rect key="frame" x="12" y="0.0" width="461" height="21"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                    <color key="textColor" name="LabelBlack"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-WS-vN6">
+                            <rect key="frame" x="0.0" y="27" width="473" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Jdt-io-wSQ">
+                                    <rect key="frame" x="12" y="8" width="449" height="24"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-9H-Fk8">
+                                            <rect key="frame" x="0.0" y="0.5" width="20" height="23"/>
+                                            <color key="tintColor" name="IconBlack"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="l8a-mZ-Yag"/>
+                                            </constraints>
+                                            <imageReference key="image" image="questionmark.circle" catalog="system" renderingMode="template"/>
+                                        </imageView>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-5u-3mz">
+                                            <rect key="frame" x="32" y="0.0" width="417" height="24"/>
+                                            <color key="textColor" name="LabelBlack"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="01h-aW-qem"/>
+                                <constraint firstItem="Jdt-io-wSQ" firstAttribute="leading" secondItem="5T5-WS-vN6" secondAttribute="leading" constant="12" id="4c7-Yh-i4d"/>
+                                <constraint firstAttribute="bottom" secondItem="Jdt-io-wSQ" secondAttribute="bottom" constant="8" id="56z-qd-khd"/>
+                                <constraint firstAttribute="trailing" secondItem="Jdt-io-wSQ" secondAttribute="trailing" constant="12" id="p8R-Bz-1Gi"/>
+                                <constraint firstItem="Jdt-io-wSQ" firstAttribute="top" secondItem="5T5-WS-vN6" secondAttribute="top" constant="8" id="vul-dS-L0W"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="5T5-WS-vN6" secondAttribute="trailing" id="5pe-SO-Lzt"/>
+                        <constraint firstAttribute="bottom" secondItem="5T5-WS-vN6" secondAttribute="bottom" id="AFP-7K-mp8"/>
+                        <constraint firstItem="5T5-WS-vN6" firstAttribute="leading" secondItem="xKN-ZO-VbC" secondAttribute="leading" id="a5G-pz-TOk"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xKN-ZO-VbC" secondAttribute="bottom" id="5Bb-fo-JDC"/>
+                <constraint firstAttribute="trailing" secondItem="xKN-ZO-VbC" secondAttribute="trailing" id="657-LV-dPn"/>
+                <constraint firstItem="xKN-ZO-VbC" firstAttribute="leading" secondItem="nXc-mh-LX3" secondAttribute="leading" id="IGu-Cn-UtV"/>
+                <constraint firstItem="xKN-ZO-VbC" firstAttribute="top" secondItem="nXc-mh-LX3" secondAttribute="top" id="jx3-TP-BjS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="42.753623188405797" y="-310.37946428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="IconBlack">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelBlack">
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

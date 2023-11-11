@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BhC-f5-YvL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Timeline View Controller-->
+        <scene sceneID="gZg-hh-khH">
+            <objects>
+                <viewController storyboardIdentifier="TimelineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eVC-lh-pu6" customClass="TimelineViewController" customModule="Compassion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mJS-GG-9ZF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorieten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhX-nM-OAK">
+                                <rect key="frame" x="20" y="100" width="122" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="26"/>
+                                <color key="textColor" name="LabelBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HaJ-sk-mYx">
+                                <rect key="frame" x="0.0" y="170.5" width="414" height="725.5"/>
+                                <color key="backgroundColor" name="BackgroundGray"/>
+                                <color key="tintColor" name="ButtonBlue"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharityTableViewCellId" id="sql-9j-AX5" customClass="CharityTableViewCell" customModule="Compassion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sql-9j-AX5" id="hyd-oF-rOc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtX-it-hwh">
+                                                    <rect key="frame" x="20" y="10" width="374" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9bV-7n-4Iq">
+                                                            <rect key="frame" x="10" y="11" width="80" height="77.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="ORb-dg-Jar"/>
+                                                                <constraint firstAttribute="width" secondItem="9bV-7n-4Iq" secondAttribute="height" multiplier="1:1" id="SJ6-EQ-R6Q"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YTa-59-HXb">
+                                                            <rect key="frame" x="100" y="17" width="264" height="66.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name charity" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQC-dU-Ldr">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="16.5"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                                                    <color key="textColor" name="LabelBlack"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN6-xL-QOh">
+                                                                    <rect key="frame" x="0.0" y="22.5" width="25.5" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                                    <color key="textColor" name="IconBlack"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wlk-d2-QnY">
+                                                                    <rect key="frame" x="0.0" y="42.5" width="240" height="24"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ban-ye-amE" customClass="SectorView" customModule="Compassion" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="24"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="SectorView"/>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="24" id="Ne7-00-5Yn"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="BackgroundGray"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="YTa-59-HXb" secondAttribute="trailing" constant="10" id="J4p-0C-Dsv"/>
+                                                        <constraint firstItem="9bV-7n-4Iq" firstAttribute="leading" secondItem="jtX-it-hwh" secondAttribute="leading" constant="10" id="PYe-Vl-zrZ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9bV-7n-4Iq" secondAttribute="bottom" constant="10" id="WBa-EN-fz1"/>
+                                                        <constraint firstItem="YTa-59-HXb" firstAttribute="leading" secondItem="9bV-7n-4Iq" secondAttribute="trailing" constant="10" id="dGR-CZ-607"/>
+                                                        <constraint firstItem="YTa-59-HXb" firstAttribute="centerY" secondItem="jtX-it-hwh" secondAttribute="centerY" id="ml7-3V-eOb"/>
+                                                        <constraint firstItem="9bV-7n-4Iq" firstAttribute="top" secondItem="jtX-it-hwh" secondAttribute="top" constant="10" id="wLk-xs-8yE"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" name="BackgroundGray"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="jtX-it-hwh" secondAttribute="bottom" constant="10" id="GFi-It-hay"/>
+                                                <constraint firstItem="jtX-it-hwh" firstAttribute="leading" secondItem="hyd-oF-rOc" secondAttribute="leading" constant="20" id="GPu-IJ-pcF"/>
+                                                <constraint firstItem="jtX-it-hwh" firstAttribute="top" secondItem="hyd-oF-rOc" secondAttribute="top" constant="10" id="SUt-6d-yhh"/>
+                                                <constraint firstAttribute="trailing" secondItem="jtX-it-hwh" secondAttribute="trailing" constant="20" id="V7J-VQ-39p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="charityCardView" destination="jtX-it-hwh" id="24H-3c-V1j"/>
+                                            <outlet property="cityLabel" destination="kN6-xL-QOh" id="qFP-UE-k63"/>
+                                            <outlet property="firstSectorView" destination="ban-ye-amE" id="mtP-JQ-l4u"/>
+                                            <outlet property="logoImageView" destination="9bV-7n-4Iq" id="80G-cr-Ku3"/>
+                                            <outlet property="nameLabel" destination="oQC-dU-Ldr" id="eAn-mV-h8p"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ddA-P4-gTv"/>
+                        <color key="backgroundColor" name="BackgroundGray"/>
+                        <constraints>
+                            <constraint firstItem="DhX-nM-OAK" firstAttribute="leading" secondItem="mJS-GG-9ZF" secondAttribute="leading" constant="20" id="0cT-1x-Vbb"/>
+                            <constraint firstItem="HaJ-sk-mYx" firstAttribute="leading" secondItem="mJS-GG-9ZF" secondAttribute="leading" id="4zl-Y5-XcM"/>
+                            <constraint firstItem="HaJ-sk-mYx" firstAttribute="top" secondItem="DhX-nM-OAK" secondAttribute="bottom" constant="40" id="Ez9-BJ-yzq"/>
+                            <constraint firstItem="DhX-nM-OAK" firstAttribute="top" secondItem="mJS-GG-9ZF" secondAttribute="top" constant="100" id="Os3-lW-YLS"/>
+                            <constraint firstAttribute="trailing" secondItem="HaJ-sk-mYx" secondAttribute="trailing" id="Xi4-Rv-xj9"/>
+                            <constraint firstAttribute="bottom" secondItem="HaJ-sk-mYx" secondAttribute="bottom" id="Xw0-Ja-Zi0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gmi-yM-54D"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="HaJ-sk-mYx" id="JOg-Qb-Srk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRg-IY-mFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481.1594202898552" y="14.732142857142856"/>
+        </scene>
+        <!--Favorieten-->
+        <scene sceneID="21i-yc-S3z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BhC-f5-YvL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorieten" image="heart.fill" catalog="system" id="7VI-3z-RaM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zJL-ij-gIt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="ButtonBlue"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eVC-lh-pu6" kind="relationship" relationship="rootViewController" id="aUg-YK-lsZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TON-gF-j8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="571.01449275362324" y="14.732142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <namedColor name="BackgroundGray">
+            <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonBlue">
+            <color red="0.13725490196078433" green="0.58431372549019611" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="IconBlack">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelBlack">
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

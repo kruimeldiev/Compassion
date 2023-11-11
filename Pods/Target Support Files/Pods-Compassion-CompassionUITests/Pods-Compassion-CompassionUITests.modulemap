@@ -1,0 +1,6 @@
+framework module Pods_Compassion_CompassionUITests {
+  umbrella header "Pods-Compassion-CompassionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

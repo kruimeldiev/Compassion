@@ -1,0 +1,19 @@
+sourceryCommand: null
+sourceryTemplate: null
+CompassionTests:
+  sources:
+    include:
+    - ./Compassion
+  output: ./CompassionTests/Mocks/Mock.generated.swift
+  targets:
+  - CompassionTests
+  testable:
+  - Compassion
+  import:
+  - Firebase
+  - FirebaseAuth
+  - Foundation
+  - Swinject
+  - SwinjectAutoregistration
+  - SwinjectStoryboard
+  - UIKit
